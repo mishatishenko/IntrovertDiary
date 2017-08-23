@@ -125,7 +125,13 @@
 	[deleteButton addTarget:self action:@selector(showDeleteNoteConfirmation)
 				forControlEvents:UIControlEventTouchUpInside];
 	deleteButton.exclusiveTouch = YES;
+
+	NSMutableArray *toolbarItems = [NSMutableArray new];
 	
+	[toolbarItems addObject:[[UIBarButtonItem alloc]
+				initWithCustomView:deleteButton]];
+	
+#ifdef ID_SHARING_ENABLED
 	UIButton *shareButton = [UIButton buttonWithType:UIButtonTypeCustom];
 	shareButton.backgroundColor = [UIColor clearColor];
 	[shareButton setImage:[UIImage imageNamed:@"share"]
@@ -135,11 +141,15 @@
 				forControlEvents:UIControlEventTouchUpInside];
 	shareButton.exclusiveTouch = YES;
 	
-	self.toolbarItems = @[[[UIBarButtonItem alloc]
-				initWithCustomView:deleteButton],
-				[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
-				UIBarButtonSystemItemFlexibleSpace target:nil action:nil],
-				[[UIBarButtonItem alloc] initWithCustomView:shareButton]];
+	[toolbarItems addObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
+				UIBarButtonSystemItemFlexibleSpace target:nil action:nil]];
+	[toolbarItems addObject:[[UIBarButtonItem alloc]
+				initWithCustomView:shareButton]];
+#else
+	[toolbarItems insertObject:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:
+				UIBarButtonSystemItemFlexibleSpace target:nil action:nil] atIndex:0];
+#endif
+	self.toolbarItems = toolbarItems;
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self
 				selector:@selector(keyboardWillAppear:)
@@ -260,6 +270,7 @@
 	[[IDNoteStorage sharedStorage] removeNote:self.note];
 }
 
+#ifdef ID_SHARING_ENABLED
 - (void)shareNote
 {
 	NSMutableArray *objectsToShare = [NSMutableArray new];
@@ -276,16 +287,9 @@
 				[[UIActivityViewController alloc]
 				initWithActivityItems:objectsToShare applicationActivities:nil];
  
-	NSArray *excludeActivities = @[UIActivityTypePostToFacebook,
-				UIActivityTypePostToTwitter,
-				UIActivityTypePostToWeibo, UIActivityTypeMessage,
-				UIActivityTypeMail, UIActivityTypeCopyToPasteboard,
-				UIActivityTypePrint];
- 
-	activityController.excludedActivityTypes = excludeActivities;
- 
 	[self presentViewController:activityController animated:YES completion:nil];
 }
+#endif
 
 - (IBAction)changePicture:(UIButton *)sender
 {
