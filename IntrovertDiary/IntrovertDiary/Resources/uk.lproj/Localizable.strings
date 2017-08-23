@@ -1,0 +1,60 @@
+/* 
+  Localizable.strings
+  IntrovertDiary
+
+  Created by Www Www on 8/20/17.
+  Copyright © 2017 Michael Tishchenko. All rights reserved.
+*/
+
+//"cToday" = "СЬОГОДНІ";
+//"cAboutApp" = "ПРО ПРОГРАМУ";
+//
+//"cJanuary" = "Січень";
+//"cFebruary" = "Лютий";
+//"cMarch" = "Березень";
+//"cApril" = "Квітень";
+//"cMay" = "Травень";
+//"cJune" = "Червень";
+//"cJuly" = "Липень";
+//"cAugust" = "Серпень";
+//"cSeptember" = "Вересень";
+//"cOctember" = "Жовтень";
+//"cNovember" = "Листопад";
+//"cDecember" = "Грудень";
+//
+//"cAttention" = "Увага!";
+//"cDeleteConfirmation" = "Ви дійсно бажаєте видалити спогади про сьогоднішній день?";
+//"cCancel" = "Ні";
+//"cOk" = "Так";
+//"cError" = "Помилка";
+//"cNoAccessToPhotos" = "Програма не має доступу до ваших фотографій. Будьласка, надайте доступ в налаштуваннях приватності.";
+//"cExpiredDescription" = "Ваша вчорашня нонатка закінчилася. Запишіть нову нотатку сьогодні!";
+//"cSorry" = "Вибачте...";
+//"cYouCanCreate" = "Ви можете створити тільки одну нотатку за добу.";
+
+"cToday" = "TODAY";
+"cAboutApp" = "ABOUT APPLICATION";
+
+"cJanuary" = "January";
+"cFebruary" = "February";
+"cMarch" = "March";
+"cApril" = "April";
+"cMay" = "May";
+"cJune" = "June";
+"cJuly" = "July";
+"cAugust" = "August";
+"cSeptember" = "September";
+"cOctember" = "Octember";
+"cNovember" = "November";
+"cDecember" = "December";
+
+"cAttention" = "Attention!";
+"cDeleteConfirmation" = "Are you sure you want to delete the memories of today?";
+"cCancel" = "Cancel";
+"cOk" = "Ok";
+"cError" = "Error";
+"cNoAccessToPhotos" = "The application has not access to Camera Roll. Please, enable access at Privacy Settings.";
+"cExpiredDescription" = "Your yesterday note was expired. Lets note new memories!";
+"cSorry" = "Sorry...";
+"cYouCanCreate" = "You can create only one note per day.";
+

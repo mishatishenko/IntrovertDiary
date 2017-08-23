@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  IntrovertDiary
+
+  Created by Www Www on 8/21/17.
+  Copyright © 2017 Michael Tishchenko. All rights reserved.
+*/
+
+//"NSPhotoLibraryUsageDescription" = "Приложение нуждаеться в доступе к вашим фотографиям для возможности изменять изображения для записей. ";
+
+"NSPhotoLibraryUsageDescription" = "The application requires access to your Camera Roll to give ability change note picture.";

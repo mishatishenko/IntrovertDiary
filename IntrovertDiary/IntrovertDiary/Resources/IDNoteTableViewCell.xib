@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-UI-Display-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="IDNoteTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="92"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="91.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FHB-Vf-HkY" customClass="IDDropShadowView">
+                        <rect key="frame" x="16" y="15.5" width="60" height="60"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="mCA-w0-06b">
+                                <rect key="frame" x="-0.5" y="-0.5" width="60" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mCA-w0-06b" firstAttribute="width" secondItem="FHB-Vf-HkY" secondAttribute="width" id="1sl-hl-ocb"/>
+                            <constraint firstItem="mCA-w0-06b" firstAttribute="leading" secondItem="FHB-Vf-HkY" secondAttribute="leading" id="411-dr-SyD"/>
+                            <constraint firstAttribute="height" constant="60" id="LZR-L0-0Xs"/>
+                            <constraint firstItem="mCA-w0-06b" firstAttribute="height" secondItem="FHB-Vf-HkY" secondAttribute="height" id="Uyb-lV-2Do"/>
+                            <constraint firstItem="mCA-w0-06b" firstAttribute="top" secondItem="FHB-Vf-HkY" secondAttribute="top" id="eYa-sh-EiZ"/>
+                            <constraint firstAttribute="width" constant="60" id="yte-qh-HBA"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKZ-C6-2rK">
+                        <rect key="frame" x="92" y="15" width="23" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="kac-Zy-qAp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
+                        <color key="textColor" red="0.38039215686274508" green="0.42352941176470588" blue="0.45098039215686275" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO1-29-gZN">
+                        <rect key="frame" x="92" y="39.5" width="28.5" height="14"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
+                        <color key="textColor" red="0.38039215686274508" green="0.42352941176470588" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="FHB-Vf-HkY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="2b7-X3-7EI"/>
+                    <constraint firstItem="FHB-Vf-HkY" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4t6-zG-8fC"/>
+                    <constraint firstItem="XO1-29-gZN" firstAttribute="top" secondItem="WKZ-C6-2rK" secondAttribute="bottom" constant="10" id="AFf-si-bA8"/>
+                    <constraint firstItem="WKZ-C6-2rK" firstAttribute="top" secondItem="FHB-Vf-HkY" secondAttribute="top" id="G1P-64-2Hi"/>
+                    <constraint firstItem="XO1-29-gZN" firstAttribute="leading" secondItem="WKZ-C6-2rK" secondAttribute="leading" id="K1s-M7-2Mb"/>
+                    <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="XO1-29-gZN" secondAttribute="trailing" constant="16" id="ueF-MB-0bC"/>
+                    <constraint firstItem="WKZ-C6-2rK" firstAttribute="leading" secondItem="FHB-Vf-HkY" secondAttribute="trailing" constant="16" id="weZ-Db-c2f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="WKZ-C6-2rK" id="fwI-vp-XjU"/>
+                <outlet property="noteImageView" destination="mCA-w0-06b" id="027-KQ-vGc"/>
+                <outlet property="noteLabel" destination="XO1-29-gZN" id="cTN-KR-apD"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="image" width="20" height="20"/>
+    </resources>
+</document>
